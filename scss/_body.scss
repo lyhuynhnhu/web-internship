@@ -2,32 +2,32 @@
     width: $width;
     height: $height;
 }
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-left: $left;
+    margin-bottom: $bottom;
+    margin-right: $right;
+}
 .product{
     @include width_height(280px, 280px);
     cursor: pointer;
     a{
         text-decoration-line: none;
         img{
-            height: 270px;
-            width: 230px;
-            margin-left: 30px;
-            margin-top: 20px;
+            @include width_height(230px, 230px);
+            @include margin(20px, 0, 0, 30px);
         }
     }
 }
 .center{
     @include width_height(90%, auto);
-    margin-left: 12%;
-    margin-top: 100px;
+    @include margin(100px, 0, 0, 12%);
 }
 .product_frame{
     @include width_height(280px, auto);
     cursor: pointer;
     display: inline-block;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    @include margin(15px, 30px, 15px, 30px);
     border: 2px solid rgb(206, 204, 204);
 }
 .product_frame:hover{

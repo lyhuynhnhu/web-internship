@@ -3,21 +3,23 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: $fontsize;
 }
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-left: $left;
+    margin-bottom: $bottom;
+    margin-right: $right;
+}
 header{
     height: 60px;
 }
 .img_logo{
-    margin-left: 30%;
-    margin-top: 2px;
-    margin-bottom: 30px;
+    @include margin(2px, 0, 30px, 30%);
     cursor: pointer;
 }
 .image_logo{
     border-right:1px solid darkgrey;
     height: 30px;
-    margin-left: 50%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    @include margin(30px, 0, 30px, 50%);
 }
 .list_menu{
     height: auto;
