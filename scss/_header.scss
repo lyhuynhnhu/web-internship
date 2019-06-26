@@ -1,0 +1,39 @@
+@mixin colorVsFont($color, $fontsize) {
+    color: $color;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: $fontsize;
+}
+header{
+    height: 60px;
+}
+.img_logo{
+    margin-left: 30%;
+    margin-top: 2px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.image_logo{
+    border-right:1px solid darkgrey;
+    height: 30px;
+    margin-left: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.list_menu{
+    height: auto;
+    @include colorVsFont(darkgrey, 20px);
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    
+    ul{
+        border-radius: 5px;
+        position: absolute;
+        list-style: none;
+        display: none;
+    
+        li:hover{
+            display: block;
+        }
+    }
+}
