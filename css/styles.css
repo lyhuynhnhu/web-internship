@@ -2,22 +2,24 @@ header {
   height: 60px; }
 
 .img_logo {
-  margin-left: 30%;
   margin-top: 2px;
+  margin-left: 30%;
   margin-bottom: 30px;
+  margin-right: 0;
   cursor: pointer; }
 
 .image_logo {
   border-right: 1px solid darkgrey;
   height: 30px;
-  margin-left: 50%;
   margin-top: 30px;
-  margin-bottom: 30px; }
+  margin-left: 50%;
+  margin-bottom: 30px;
+  margin-right: 0; }
 
 .list_menu {
   height: auto;
   color: darkgrey;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   display: inline-block;
   text-align: center;
@@ -29,6 +31,20 @@ header {
     display: none; }
     .list_menu ul li:hover {
       display: block; }
+      .list_menu ul li:hover .active {
+        color: darkgrey;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        height: auto;
+        margin-top: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        line-height: 20px;
+        text-align: left;
+        display: inline-block; }
 
 .product {
   width: 280px;
@@ -37,26 +53,30 @@ header {
   .product a {
     text-decoration-line: none; }
     .product a img {
-      height: 270px;
       width: 230px;
+      height: 230px;
+      margin-top: 20px;
       margin-left: 30px;
-      margin-top: 20px; }
+      margin-bottom: 0;
+      margin-right: 0; }
 
 .center {
   width: 90%;
   height: auto;
+  margin-top: 100px;
   margin-left: 12%;
-  margin-top: 100px; }
+  margin-bottom: 0;
+  margin-right: 0; }
 
 .product_frame {
   width: 280px;
   height: auto;
   cursor: pointer;
   display: inline-block;
-  margin-left: 30px;
-  margin-right: 30px;
   margin-top: 15px;
+  margin-left: 30px;
   margin-bottom: 15px;
+  margin-right: 30px;
   border: 2px solid #cecccc; }
 
 .product_frame:hover {
