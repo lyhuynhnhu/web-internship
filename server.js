@@ -8,13 +8,17 @@ var fs = require('fs');
 const handlebars = require('handlebars');
 
 const input = './index.hbs';
-const output = './index1.html';
+const output = './index.html';
 
-const data = require('./list_products.json');
+const data = require('./data.json');
 
 const source = fs.readFileSync(input, 'utf8');
+const header = fs.readFileSync("./hbs/header.hbs", 'utf8');
+const body = fs.readFileSync("./hbs/body.hbs", 'utf8');
 const footer = fs.readFileSync("./hbs/footer.hbs", 'utf8');
 
+handlebars.registerPartial("head-block", header);
+handlebars.registerPartial("hero-block", body);
 handlebars.registerPartial("footer-block", footer);
 
 const template = handlebars.compile(source, { strict: true });
@@ -33,7 +37,7 @@ http.createServer(function(request, response) {
       return;
     }
 
-    if (fs.statSync(filename).isDirectory()) filename += '/index1.html';
+    if (fs.statSync(filename).isDirectory()) filename += '/index.html';
 
     fs.readFile(filename, "binary", function(err, file) {
       if(err) {        

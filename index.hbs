@@ -9,44 +9,23 @@
 <body>
     <!--header-->
     <header>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="image_logo"><img src="images/logo.png" class="img_logo"></div>
-            </div>
-            <div class="col-md-8">
-                <div class="list_menu">
-                <ul>
-                    {{#each menu}}
-                        <li class="active">{{this}}</li>
-                    {{/each }}
-                </ul>
-                </div>
-            </div>    
-        </div>
+        {{#> head-block}}
+            {{> hbs/header }}
+        {{/head-block}}
     </header>
 
     <!--body-->
     <nav>
-        <div class="center">
-            {{#each products}}
-            <div class="product_frame">
-                <div class="product">
-                    <a href=""><img src="images/{{image}}"></a>
-                </div>
-                <div class="product_information">
-                    <h5>{{name}}</h5>
-                    <strong>{{price}}</strong>
-                </div>
-            </div>    
-            {{/each}}
-            
-        </div>
+        {{#> hero-block}}
+        {{!-- Hero content goes here. --}}
+            {{> hbs/body }}
+        {{/hero-block}}
     </nav>
     <!--footer-->
     <footer>
         {{#> footer-block}}
         {{!--
-            The `includes/footer` partial is the default content,
+            The `hbs/footer` partial is the default content,
             but can be overridden.
         --}}
             {{> hbs/footer }}

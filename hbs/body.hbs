@@ -1,15 +1,13 @@
-<nav>
-    <div class="center">
-        {{#each products}}
-        <div class="product_frame">
-            <div class="product">
-                <a href=""><img src="images/{{image}}"></a>
-            </div>
-            <div class="product_information">
-                <h5>{{name}}</h5>
-                <strong>{{price}}</strong>
-            </div>
-        </div>    
-        {{/each}}
-    </div>
-</nav>
+<div class="center">
+    {{#each products}}
+    <div class="product_frame">
+        <div class="product">
+            <a href=""><img src="images/{{image}}"></a>
+        </div>
+        <div class="product_information">
+            <h5>{{name}}</h5>
+            <strong>{{price}}</strong>
+        </div>
+    </div>    
+    {{/each}}
+</div>
