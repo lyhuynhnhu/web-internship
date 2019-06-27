@@ -1,0 +1,19 @@
+{
+    "menu": [
+        {
+            "name": "Men"
+        },
+        {
+            "name": "Women"
+        },
+        {
+            "name": "About"
+        },
+        {
+            "name": "Blog"
+        },
+        {
+            "name": "Support"
+        }
+    ]
+}

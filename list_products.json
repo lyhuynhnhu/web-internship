@@ -1,0 +1,29 @@
+{
+    "products": [
+        {
+            "name": "Sunt officia sed deserunt",
+            "price": "$120.00",
+            "image": "img1.png"
+        },
+        {
+            "name": "Sunt officia sed deserunt",
+            "price": "$145.00",
+            "image": "img2.png"
+        },
+        {
+            "name": "Sunt officia sed deserunt",
+            "price": "$127.00",
+            "image": "img3.png"
+        },
+        {
+            "name": "Sunt officia sed deserunt",
+            "price": "$130.00",
+            "image": "img4.png"
+        },
+        {
+            "name": "Sunt officia sed deserunt",
+            "price": "$100.00",
+            "image": "img1.png"
+        }
+    ]
+}
