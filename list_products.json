@@ -2,7 +2,7 @@
     "products": [
         {
             "name": "Sunt officia sed deserunt",
-            "price": "$120.00",
+            "price": "$121.00",
             "image": "img1.png"
         },
         {
@@ -25,5 +25,12 @@
             "price": "$100.00",
             "image": "img1.png"
         }
+    ],
+    "menu": [
+        "Men",
+        "Women",
+        "About",
+        "Blog",
+        "Support"
     ]
 }

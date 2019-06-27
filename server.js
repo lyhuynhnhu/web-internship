@@ -2,20 +2,25 @@ var http = require("http"),
     url = require("url"),
     path = require("path"),
     fs = require("fs"),
-    Handlebars = require('handlebars'),
     port = process.argv[2] || 8888;
 var fs = require('fs');
+
 const handlebars = require('handlebars');
 
-const inFile = './index.hbs';
-const outFile = './index1.html';
+const input = './index.hbs';
+const output = './index1.html';
 
 const data = require('./list_products.json');
 
-const source = fs.readFileSync(inFile, 'utf8');
+const source = fs.readFileSync(input, 'utf8');
+const footer = fs.readFileSync("./hbs/footer.hbs", 'utf8');
+
+handlebars.registerPartial("footer-block", footer);
+
 const template = handlebars.compile(source, { strict: true });
 const result = template(data);
-fs.writeFileSync(outFile, result);
+fs.writeFileSync(output, result);
+
 http.createServer(function(request, response) {
   var uri = url.parse(request.url).pathname
     , filename = path.join(process.cwd(), uri);

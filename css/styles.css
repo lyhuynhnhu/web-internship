@@ -47,13 +47,13 @@ header {
 
 .product {
   width: 280px;
-  height: 280px;
+  height: 300px;
   cursor: pointer; }
   .product a {
     text-decoration-line: none; }
     .product a img {
       width: 230px;
-      height: 230px;
+      height: 250px;
       margin-top: 20px;
       margin-left: 30px;
       margin-bottom: 0;
