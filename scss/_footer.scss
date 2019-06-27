@@ -1,0 +1,31 @@
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-left: $left;
+    margin-bottom: $bottom;
+    margin-right: $right;
+}
+footer{
+    height: auto;
+    background-color: rgb(241, 241, 241);
+    border-bottom: 1px solid darkgrey;
+}
+.footer_item{
+    @include margin(20px, 10px, 5px, 50px);
+    display: inline-block;
+    text-align: left;
+    ul{
+        list-style: none;
+    }
+}
+hr{
+    width: 30%;
+    border-top:1px solid white;
+    @include margin(3px, 0, 3px, 0);
+}
+.end{
+    text-align: center;
+    font-size: 11px;
+    color: darkgrey;
+    padding-bottom: 6px;
+    padding-top: 0px;
+}

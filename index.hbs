@@ -16,11 +16,9 @@
             <div class="col-md-8">
                 <div class="list_menu">
                 <ul>
-                    <li class="active">Men</li>
-                    <li class="active">Women</li>
-                    <li class="active">About</li>
-                    <li class="active">Blog</li>
-                    <li class="active">Support</li>
+                    {{#each menu}}
+                        <li class="active">{{name}}</li>
+                    {{/each }}
                 </ul>
                 </div>
             </div>    
@@ -30,51 +28,17 @@
     <!--body-->
     <nav>
         <div class="center">
+            {{#each products}}
             <div class="product_frame">
                 <div class="product">
-                    <a href=""><img src="images/img1.png"></a>
+                    <a href=""><img src="images/{{image}}"></a>
                 </div>
                 <div class="product_information">
-                    <h5>Sunt officia sed deserunt</h5>
-                    <strong>$120</strong>
-                </div>
-            </div>
-            <div class="product_frame">
-                <div class="product">
-                    <a href=""><img src="images/img2.png"></a>
-                </div>
-                <div class="product_information">
-                    <h5>Sunt officia sed deserunt</h5>
-                    <strong>$120</strong>
+                    <h5>{{name}}</h5>
+                    <strong>{{price}}</strong>
                 </div>
             </div>    
-            <div class="product_frame">
-                <div class="product">
-                    <a href=""><img src="images/img3.png"></a>
-                </div>
-                <div class="product_information">
-                    <h5>Sunt officia sed deserunt</h5>
-                    <strong>$120</strong>
-                </div>
-            </div>
-            <div class="product_frame">
-                <div class="product">
-                    <a href=""><img src="images/img4.png"></a>
-                </div>
-                <div class="product_information">
-                    <h5>Sunt officia sed deserunt</h5>
-                    <strong>$120</strong>
-                </div>
-            </div>
-            <div class="product_frame">
-                <div class="product">
-                    <a href=""><img src="images/img1.png"></a>
-                </div>
-                <div class="product_information">
-                    <h5>Sunt officia sed deserunt</h5>
-                    <strong>$120</strong>
-                </div>
-            </div>    
+            {{/each}}
             
         </div>
     </nav>

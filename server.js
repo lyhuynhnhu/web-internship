@@ -2,8 +2,20 @@ var http = require("http"),
     url = require("url"),
     path = require("path"),
     fs = require("fs"),
+    Handlebars = require('handlebars'),
     port = process.argv[2] || 8888;
+var fs = require('fs');
+const handlebars = require('handlebars');
 
+const inFile = './index.hbs';
+const outFile = './index1.html';
+
+const data = require('./list_products.json');
+
+const source = fs.readFileSync(inFile, 'utf8');
+const template = handlebars.compile(source, { strict: true });
+const result = template(data);
+fs.writeFileSync(outFile, result);
 http.createServer(function(request, response) {
   var uri = url.parse(request.url).pathname
     , filename = path.join(process.cwd(), uri);
@@ -16,7 +28,7 @@ http.createServer(function(request, response) {
       return;
     }
 
-    if (fs.statSync(filename).isDirectory()) filename += '/index.html';
+    if (fs.statSync(filename).isDirectory()) filename += '/index1.html';
 
     fs.readFile(filename, "binary", function(err, file) {
       if(err) {        

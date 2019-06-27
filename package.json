@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "handlebars": "^4.1.2"
   },
   "devDependencies": {
     "node-sass": "^4.12.0"
