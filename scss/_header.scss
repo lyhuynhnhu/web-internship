@@ -10,7 +10,7 @@
     margin-right: $right;
 }
 header{
-    height: 60px;
+    height: 80px;
 }
 .img_logo{
     @include margin(2px, 0, 30px, 30%);
@@ -30,25 +30,21 @@ header{
     
     ul{
         border-radius: 5px;
+        margin-top: 13px;
         position: absolute;
-        list-style: none;
-        display: none;
-    
-        li:hover{
-            display: block;
-            .active{
-                @include colorVsFont(darkgrey, 18px);
-                font-weight: normal;
-                height: auto;
-                margin-top: 2px;
-                padding-left: 20px;
-                padding-right: 20px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                line-height: 20px;
-                text-align: left;
-                display: inline-block;
-            }
-        }
+        list-style: none;   
     }
+}
+.active{
+    @include colorVsFont(darkgrey, 18px);
+    font-weight: normal;
+    height: auto;
+    margin-top: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 20px;
+    text-align: left;
+    display: inline-block;
 }
