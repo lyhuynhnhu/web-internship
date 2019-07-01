@@ -8,6 +8,10 @@
     margin-bottom: $bottom;
     margin-right: $right;
 }
+h5{
+    color: darkgrey;
+    font-style: italic;
+}
 .product{
     @include width_height(280px, 300px);
     cursor: pointer;
@@ -27,7 +31,7 @@
     @include width_height(280px, auto);
     cursor: pointer;
     display: inline-block;
-    @include margin(15px, 30px, 15px, 30px);
+    @include margin(15px, 30px, 40px, 30px);
     border: 2px solid rgb(206, 204, 204);
 }
 .product_frame:hover{
@@ -35,7 +39,7 @@
 }
 .product_information{
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     padding-top: 10px;
     @include width_height(275px, 80px);
     border-bottom-left-radius: 10px;

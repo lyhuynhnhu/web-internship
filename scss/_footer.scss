@@ -10,7 +10,7 @@ footer{
     border-bottom: 1px solid darkgrey;
 }
 .footer_item{
-    @include margin(20px, 10px, 5px, 50px);
+    @include margin(20px, 10px, 5px, 100px);
     display: inline-block;
     text-align: left;
     ul{
@@ -18,9 +18,9 @@ footer{
     }
 }
 hr{
-    width: 30%;
+    width: 40%;
     border-top:1px solid white;
-    @include margin(3px, 0, 3px, 0);
+    @include margin(3px, 0, 3px, 30%);
 }
 .end{
     text-align: center;
